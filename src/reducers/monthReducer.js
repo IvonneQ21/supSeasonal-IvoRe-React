@@ -1,12 +1,19 @@
 import initialState from './initialState';
 
-const currentSelectedMonth = (state = initialState.currentSelectedMonth, action) => {
+//
+// export default function(){
+//   return
+//
+// }
+
+const currentSelectedMonth = (state = null, action) => {
   switch(action.type) {
     case 'SET_MONTH':
-      return action.month;
-    default:
-      return state
+      return action.payload;
+    }
+    // default:
+      return state;
   }
-}
+// }
 
 export default currentSelectedMonth;

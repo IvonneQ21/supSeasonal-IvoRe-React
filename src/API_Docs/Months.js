@@ -69,7 +69,3 @@ const API_URL = `http://supseasonal.herokuapp.com/api/months/${month}`
 
 
 // creating fetching function
-const fetchIngridients =(month) => {
-
-}
-}

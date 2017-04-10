@@ -5,9 +5,8 @@ import axios from 'axios';
 const fetchIngredients = (queryMonth) => {
   const API_URL = `http://supseasonal.herokuapp.com/api/months/${queryMonth}`
   return axios.get(API_URL)
-    .then((response) => {
-      return response.data;
-    });
+    .then(response => response.data)
+    // });
 }
 
 const fetchRecipes = (queryMonth) => {
@@ -17,12 +16,12 @@ const fetchRecipes = (queryMonth) => {
       return response.data;
     });
 }
-
+//action for month selection.
 const setMonth = (queryMonth) => {
   console.log('i am clicked');
   return {
     type: 'SET_MONTH',
-    month: queryMonth
+    payload: queryMonth
   }
 }
 

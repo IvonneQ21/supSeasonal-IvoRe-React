@@ -10,14 +10,14 @@ import './App.css';
 export default class App extends Component {
   constructor(props) {
     super(props);
-
+//========== inforamtion below not necessary? state is kept by reducers?
     this.state = {
       ingredients: [],
       recipes: [],
       currentSelectedMonth: "apr",
     }
   }
-
+//===============
   render() {
     return (
       <div className="App">
