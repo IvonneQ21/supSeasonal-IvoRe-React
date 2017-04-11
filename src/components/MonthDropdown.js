@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setMonth, getIngredients, getRecipes } from '../actions';
 import { Dropdown, NavItem, Button } from 'react-materialize';
-
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 const mapStateToProps = (state, ownProps) => {
   // console.log('src/components/MonthDropdown/mapStateToProps');
   return ({
@@ -42,27 +43,34 @@ class MonthDropdown extends React.Component {
   render() {
     console.log('src/components/MonthDropdown/render');
     return (
-      <Dropdown
+      // return (
+    // <div>
+    //   <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+    //     <MenuItem value={1} primaryText="Never" />
+    //     <MenuItem value={2} primaryText="Every Night" />
+    //     <MenuItem value={3} primaryText="Weeknights" />
+    //     <MenuItem value={4} primaryText="Weekends" />
+    //     <MenuItem value={5} primaryText="Weekly" />
+    //   </DropDownMenu>
 
-        trigger={<Button>Select A Month</Button>} >
-        <form onSubmit={this.handleSubmit}>
-          <label>
-        <NavItem value="jan">January</NavItem>
-        <NavItem value="feb">February</NavItem>
-        <NavItem value="mar">March</NavItem>
-        <NavItem value="apr">April</NavItem>
-        <NavItem value="may">May</NavItem>
-        <NavItem value="jun">June</NavItem>
-        <NavItem value="jul">July</NavItem>
-        <NavItem value="aug">Aug</NavItem>
-        <NavItem value="sep">September</NavItem>
-        <NavItem value="oct">October</NavItem>
-        <NavItem value="nov">November</NavItem>
-        <NavItem value="dec">December</NavItem>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      </Dropdown>
+    <div>
+      <DropDownMenu value={this.props.currentSelectedMonth} onChange={this.handleChange}>
+
+            <MenuItem value="jan">January</MenuItem>
+            <MenuItem value="feb">February</MenuItem>
+            <MenuItem value="mar">March</MenuItem>
+            <MenuItem value="apr">April</MenuItem>
+            <MenuItem value="may">May</MenuItem>
+            <MenuItem value="jun">June</MenuItem>
+            <MenuItem value="jul">July</MenuItem>
+            <MenuItem value="aug">Aug</MenuItem>
+            <MenuItem value="sep">September</MenuItem>
+            <MenuItem value="oct">October</MenuItem>
+            <MenuItem value="nov">November</MenuItem>
+            <MenuItem value="dec">December</MenuItem>
+
+      </DropDownMenu>
+        </div>
 
 
       //
