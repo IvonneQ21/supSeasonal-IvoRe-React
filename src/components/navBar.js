@@ -9,7 +9,7 @@ import {Navbar,Row, Input} from 'react-materialize';
 // import {Navbar} from 'react-bootstrap';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('src/components/NavBar/mapStateToProps');
+  // console.log('src/components/NavBar/mapStateToProps');
   return ({
     ingredients: state.ingredients,
     recipes: state.recipes,
@@ -18,7 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  console.log('src/components/NavBar/mapDispatchToProps');
+  // console.log('src/components/NavBar/mapDispatchToProps');
   return bindActionCreators({ setMonth, getIngredients, getRecipes }, dispatch);
 }
 

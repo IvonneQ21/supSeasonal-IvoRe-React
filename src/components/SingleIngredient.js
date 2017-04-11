@@ -4,7 +4,7 @@ import {ListGroupItem} from 'react-bootstrap';
 
 const IngredientListItem = () => {
   return (
-    <ListGroupItem>Ingredient1 </ListGroupItem>
+    <ListGroupItem> Ingredient1 </ListGroupItem>
     <li>Item 1</li>
     // <ListGroup>
     //   <ListGroupItem>Ingredient1 </ListGroupItem>

@@ -45,7 +45,7 @@ class MonthDropdown extends React.Component {
       <Dropdown
 
         trigger={<Button>Select A Month</Button>} >
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
           <label>
             <NavItem value="jan">January</NavItem>
             <NavItem value="feb">February</NavItem>
