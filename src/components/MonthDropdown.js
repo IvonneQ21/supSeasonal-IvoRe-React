@@ -4,6 +4,20 @@ import { bindActionCreators } from 'redux';
 import { setMonth, getIngredients, getRecipes } from '../actions';
 import { Dropdown, NavItem, Button } from 'react-materialize';
 
+
+// this file could be simpler. can do a single const for months that you can call globally
+// eg; something like... const months = [{ value: 'xxx', text:'xxx', action: `xxx`}]
+// rest of this would have been a call to that const, which would make it easier to classify.
+/////I see like that I can access the month and send the action for the particular month.
+// yeah... it would have made the month dropdown simpler and easier to navitate.
+
+
+//I guess we can refactor it to make it simpler. Its just that we've had a few days to work on it.
+//has to be handed in tomorrow.
+//so there is not a lot of time for us. :-(
+// where is your api call?
+
+
 const mapStateToProps = (state, ownProps) => {
   // console.log('src/components/MonthDropdown/mapStateToProps');
   return ({
@@ -16,12 +30,13 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   // console.log('src/components/MonthDropdown/mapDispatchToProps');
   return bindActionCreators({ setMonth, getIngredients, getRecipes }, dispatch)
+  // getRecipes is enough, ingriedents fetched based on resipe, do not need to map here
 }
 
 class MonthDropdown extends React.Component {
   constructor(props) {
     super(props);
-
+// dont see form handlers of divs
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -59,6 +74,7 @@ class MonthDropdown extends React.Component {
             <NavItem value="oct">October</NavItem>
             <NavItem value="nov">November</NavItem>
             <NavItem value="dec">December</NavItem>
+
           </label>
           <input type="submit" value="Submit" />
         </form>

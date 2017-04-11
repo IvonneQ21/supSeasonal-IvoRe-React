@@ -13,3 +13,8 @@ const currentSelectedMonth = (state ='', action) => {
 }
 
 export default currentSelectedMonth;
+
+// on here, you are missing a call to the api, when you set month, you should have a
+// ingrideients payload for the selected / set month.
+// this call either has to bring in ingridients, or you need to define it elsewhere.
+// currently, no definition by month

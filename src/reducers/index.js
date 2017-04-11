@@ -7,6 +7,8 @@ const supseasonalReducers = combineReducers({
   ingredients,
   recipes,
   currentSelectedMonth
+  // missing a few calls, ingridients fetched individually.
 });
 
 export default supseasonalReducers;
+//q

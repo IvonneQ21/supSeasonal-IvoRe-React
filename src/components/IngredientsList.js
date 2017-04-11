@@ -39,7 +39,7 @@ const mapStateToProps = (state, ownProps) => {
 // }
 
 class IngredientsList extends Component {
-  render() {
+  render(ingredients, i) {
     console.log('src/components/IngredientsList/render()');
     return (
       <Row>

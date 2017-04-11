@@ -8,6 +8,7 @@ import { Table, TableHeader, TableRow, TableHeaderColumn, TableBody, TableRowCol
 
 const _renderRecipes = (recipes) => {
   // console.log('src/components/RecipesList/_renderRecipes');
+  // no mapping here
   if (recipes.length === 0) {
     return 'Select your current month & see a list of awesome recipes that include ingredients listed above!'
   } else {
@@ -29,19 +30,6 @@ const _renderRecipes = (recipes) => {
                         {_renderRecipeExtendedIngredients(item.extendedIngredients)}
                       </TableBody>
                     </Table>
-                    {/* <Table>
-                      <thead>
-                        <tr>
-                          <th data-field="id">Visual</th>
-                          <th data-field="name">Name</th>
-                          <th data-field="price">Description</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        {_renderRecipeExtendedIngredients(item.extendedIngredients)}
-                      </tbody>
-                    </Table> */}
                     <p>{item.instructions}</p>
                   </div>
                   }>
