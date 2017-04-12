@@ -5,7 +5,7 @@ import RegistrationPage from './components/LoginPage';
 // import LogIn from './components/LoginPage';
 
 
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar_Heroku';
 import MonthDropdown from './components/MonthDropdown';
 import IngredientsList from './components/IngredientsList';
 import RecipesList from './components/RecipesList';
