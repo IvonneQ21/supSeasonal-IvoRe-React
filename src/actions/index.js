@@ -50,15 +50,24 @@ export const setMonth = (queryMonth) => {
 //Ivonne
 //user login and user registration.
  // let user = {email:"", password:""}
+// need to dispatch your reducer
 
 export const postLogUser = (value) => {
   const postLogURL = `http://supseasonal.herokuapp.com/api/login`;
   return axios.post(postLogURL, value)
     .then((response) => {
       console.log('user info:', response.data);
+      console.log(response)
       return response.data;
   })
 }
+
+
+
+
+
+
+
 
 
 // findUserAction
