@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const fetchIngredients = (queryMonth) => {
   console.log('src/actions/index/fetchIngredients');
-  const API_URL = `http://supseasonal.herokuapp.com/api/months/${queryMonth}`
+  const API_URL = `https://supseasonal.herokuapp.com/api/months/${queryMonth}`
   return axios.get(API_URL)
     .then((response) => {
       return response.data;
@@ -21,7 +21,7 @@ export const getIngredients = (queryMonth) => {
 
 export const fetchRecipes = (queryMonth) => {
   console.log('src/actions/index/fetchRecipes');
-  const API_URL = `http://supseasonal.herokuapp.com/api/months/${queryMonth}/recipes`;
+  const API_URL = `https://supseasonal.herokuapp.com/api/months/${queryMonth}/recipes`;
   return axios.get(API_URL)
   .then((response) => {
     return response.data;
@@ -52,7 +52,7 @@ export const setMonth = (queryMonth) => {
  // let user = {email:"", password:""}
 
 export const postLogUser = (value) => {
-  const postLogURL = `http://supseasonal.herokuapp.com/api/login`;
+  const postLogURL = `https://supseasonal.herokuapp.com/api/login`;
   return axios.post(postLogURL, value)
     .then((response) => {
       console.log('user info:', response.data);
