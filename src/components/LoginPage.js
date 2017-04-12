@@ -24,9 +24,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const style = {
   color: 'blue',
   backgroundColor: 'grey',
-  labelColor: "blue"
+  labelColor: "blue",
+  // text-aling:center
 
 }
+
 
 /*
 class UserLogIn extends Component {
