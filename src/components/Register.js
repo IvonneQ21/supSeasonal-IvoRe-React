@@ -7,11 +7,6 @@ import {connect} from 'react-redux';
 const mapDispatchToProps = (dispatch, ownProps) => {
   return bindActionCreators({findUser}, dispatch);
 }
-// const mapStateToProps(state){
-//   return {
-//     loggedIn: false;
-//   }
-// }
 
 class UserRegistration extends Component {
   render() {

@@ -7,7 +7,6 @@ import { Card, CardTitle } from 'react-materialize';
 import { Table, TableHeader, TableRow, TableHeaderColumn, TableBody, TableRowColumn } from 'material-ui/Table';
 
 const _renderRecipeExtendedIngredients = (ingredients) => {
-  console.log('src/components/RecipesList/_renderRecipeExtendedIngredients');
   return ingredients.map((ingr) => {
     return  <TableRow>
       <TableRowColumn><img src={ingr.image} alt="" /></TableRowColumn>
@@ -18,14 +17,11 @@ const _renderRecipeExtendedIngredients = (ingredients) => {
 }
 
 const _renderRecipes = (recipes) => {
-  console.log('src/components/RecipesList/_renderRecipes');
-  console.log('recipes === ', recipes);
   if (recipes.length === 0) {
     return 'Select your current month & see a list of awesome recipes that include ingredients listed above!'
   } else if (recipes === 'Recipes Loading!') {
     return 'Recipes Loading!';
   } else {
-    console.log('src/components/RecipesList/_renderRecipes/length>0');
     return recipes.map((item) => {
       return (
         <div>
@@ -57,8 +53,6 @@ const _renderRecipes = (recipes) => {
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('src/components/recipesList/mapStateToProps');
-  console.log('state.recipes === ', state.recipes);
   return {
     recipes: state.recipes,
     ingredients: state.ingredients,
@@ -67,13 +61,11 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  console.log('src/components/recipesList/mapDispatchToProps');
   return bindActionCreators({ getRecipes }, dispatch);
 }
 
 class RecipesList extends Component {
   render() {
-    console.log('src/components/RecipesList/render()');
     return (
       <div>
         {_renderRecipes(this.props.recipes)}

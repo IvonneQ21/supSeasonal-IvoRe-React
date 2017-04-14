@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import RegistrationPage from './components/LoginPage';
-// import {FieldGroup} from 'react-bootstrap';
-// import LogIn from './components/LoginPage';
 
 
 import NavBar from './components/NavBar_Heroku';
@@ -15,11 +13,10 @@ import './App.css';
 
 export default class App extends Component {
   render() {
-    console.log('src/App.js/render');
     return (
         <Router>
-          <div>
-          {/* <NavBar /> */}
+          <div className="">
+                  <h3>SupSeasonal</h3>
             <div>
               <ul>
                 <li><Link to="/">Login</Link></li>
