@@ -16,7 +16,7 @@ export default class App extends Component {
     return (
         <Router>
           <div className="">
-                  <h3>SupSeasonal</h3>
+                  <h3 textAlign='center'>SupSeasonal</h3>
             <div>
               <ul>
                 <li><Link to="/">Login</Link></li>

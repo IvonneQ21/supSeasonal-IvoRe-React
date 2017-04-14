@@ -7,19 +7,15 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 
 
-
-
 const mapDispatchToProps = (dispatch, ownProps) => {
   return bindActionCreators({findUser}, dispatch);
 }
-
 
 const style = {
   color: 'blue',
   backgroundColor: 'grey',
   labelColor: "blue"
 }
-
 
 class UserLogIn extends Component {
   render() {
@@ -40,5 +36,6 @@ class UserLogIn extends Component {
     );
   }
 }
+
 
 export default connect(null, mapDispatchToProps)(reduxForm({ form:'LoginForm'})(UserLogIn));
